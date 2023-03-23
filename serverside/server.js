@@ -16,7 +16,5 @@ app.use('/api/user',userRouter)
 app.use(cors({origin:["http://localhost:3000","https://drugstore-inventory.onrender.com"]}))
 
 
- const PORT=process.env.PORT||180
-app.listen(PORT,()=>{
-    console.log("listening on port 180")
-})
+ const PORT=process.env.PORT||4000
+app.listen(PORT)

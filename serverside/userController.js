@@ -16,10 +16,10 @@ try{
   let token=createToken(user._id)
   res.json({email,token})
 }
-catch(err){
+catch(error){
 
 
-res.status(400).json({err:err.message})
+res.status(400).json({error:error.message})
 
 }
 
@@ -34,10 +34,10 @@ const user=await User.signup(email,password)
 let token=createToken(user._id)
 res.json({email,token})
 }
-catch(err){
+catch(error){
 
 
 
-    res.status(404).json({err:err.message})
+    res.status(404).json({error:error.message})
 }
 }
