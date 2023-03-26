@@ -13,7 +13,11 @@ connectDatabase()
 app.use(express.json())
 app.use('/api/drugs',routeDrugs)
 app.use('/api/user',userRouter)
-app.use(cors({origin:["http://localhost:3000","https://drugstore-inventory.onrender.com"]}))
+app.use(cors({origin:"https://drugstore-inventory.onrender.com",
+methods:"*",
+allowedHeaders:['Content-Type','Authorization']
+
+}))
 
 
  const PORT=process.env.PORT||4000
