@@ -15,6 +15,7 @@ try{
   let user=await User.login(email,password)
   let token=createToken(user._id)
   res.status(200).json({email,token})
+  console.log(user)
 }
 catch(error){
 res.status(400).json({error:error.message})
@@ -33,9 +34,6 @@ let token=createToken(user._id)
 res.status(200).json({email,token})
 }
 catch(error){
-
-
-
-    res.status(404).json({error:error.message})
+ res.status(404).json({error:error.message})
 }
 }
