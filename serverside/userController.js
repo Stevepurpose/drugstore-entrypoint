@@ -14,11 +14,11 @@ const{email,password}=req.body
 try{
   let user=await User.login(email,password)
   let token=createToken(user._id)
-  res.json({email,token})
+  res.status(200).json({email,token})
   
 }
 catch(error){
-res.json({error:error.message})
+res.status(400).json({error:error.message})
 
 }
 
@@ -31,9 +31,9 @@ try{
 const user=await User.signup(email,password)
 
 let token=createToken(user._id)
-res.json({email,token})
+res.status(200).json({email,token})
 }
 catch(error){
- res.json({error:error.message})
+ res.status(400).json({error:error.message})
 }
 }
