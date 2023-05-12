@@ -10,9 +10,9 @@ let createToken=(_id)=>{
 
 
 exports.loginUser= async function(req,res){
-//const{email,password}=req.body
+const{email,password}=req.body
 try{
-  const{email,password}=req.body
+ // const{email,password}=req.body
   let user=await User.login(email,password)
   let token=createToken(user._id)
   res.status(200).json({email,token})
@@ -26,9 +26,9 @@ res.status(400).json(error)
 }
 
 exports.signupUser= async function(req,res){
-   // const{email,password}=req.body
+   const{email,password}=req.body
 try{
-  const{email,password}=req.body 
+ // const{email,password}=req.body 
 const user=await User.signup(email,password)
 
 let token=createToken(user._id)

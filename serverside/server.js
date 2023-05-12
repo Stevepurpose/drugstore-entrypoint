@@ -4,21 +4,19 @@ const cors=require ('cors')
 
 dotenv.config({path:'../config.env'})
 const routeDrugs=require('./drugRouter')
+const corsOptions = require('./config/corsOptions')
 const connectDatabase=require('./drugDB.js')
 const userRouter=require('./useRouter')
 const app=express()
 
 
 connectDatabase()
-app.use(express.json())
-app.use('/api/drugs',routeDrugs)
+
+app.use(cors(corsOptions))
+app.use(express.static('build'))
+  app.use(express.json())
+  app.use('/api/drugs',routeDrugs)
 app.use('/api/user',userRouter)
-app.use(cors({origin:"https://drugstore-inventory.onrender.com",
-methods:"*",
-allowedHeaders:['Content-Type','Authorization']
-
-}))
-
 
  const PORT=process.env.PORT||4000
 app.listen(PORT)

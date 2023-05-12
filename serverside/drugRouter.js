@@ -4,7 +4,9 @@ const{getDrugs,addDrug,getDrug,removeDrug,updateDrug}=require('./drugController'
 
 let authCheck=require('./requireAuth')
 
+
 router.use(authCheck)
+
 
 router.route("/")
       .get(getDrugs)
