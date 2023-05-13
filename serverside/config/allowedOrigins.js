@@ -1,5 +1,6 @@
 const allowedOrigins=[
-    'https://drugstore-inventory.onrender.com'
+   'https://drugstore-inventory.onrender.com'
+   
 
 
 ]
