@@ -1,3 +1,3 @@
 # drugstore-backend
-A drugstore management app.was inspired to make it by a family member who kept on throwing away expired drugs.
-used the useState hook for state management,mongo db for dsatabase,you know just a MERN APP.was one project that was very hard for me to deploy but at last I was so happy I did.
+A drugstore management app sample,this version is mainly for the public to test.Eventually specific versions and brandings will be made as required by chemists or pharmaceuticals or warehouses in general.was inspired to make it by a family member who kept on throwing away expired drugs.
+used the useState hook for state management,mongo db for database,you know just a MERN APP.was one project that was very hard for me to deploy but at last I was so happy I did.still working on implementing search and edit feature on individual drugs.

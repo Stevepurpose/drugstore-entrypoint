@@ -1,6 +1,7 @@
 const allowedOrigins=[
    'https://drugstore-inventory.onrender.com'
    
+   
 
 
 ]
